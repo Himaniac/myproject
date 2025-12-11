@@ -20,15 +20,16 @@ def check():
         messagebox.showinfo("Result", f"'{text}' → NOT a palindrome ✖")
 
 # GUI
-root = tk.Tk()
-root.title("All-Case Palindrome Checker")
-root.geometry("360x160")
+gui = tk.Tk()
+gui.title("All-Case Palindrome Checker")
+gui.geometry("360x160")
 
-tk.Label(root, text="Enter text:", font=("Arial", 12)).pack(pady=5)
+tk.Label(gui, text="Enter text:", font=("Arial", 12)).pack(pady=5)
 
-entry = tk.Entry(root, width=35, font=("Arial", 12))
+entry = tk.Entry(gui, width=35, font=("Arial", 12))
 entry.pack(pady=5)
 
-tk.Button(root, text="Check", command=check, font=("Arial", 12)).pack(pady=10)
+tk.Button(gui, text="Check", command=check, font=("Arial", 12)).pack(pady=10)
 
-root.mainloop()
+
+gui.mainloop()
